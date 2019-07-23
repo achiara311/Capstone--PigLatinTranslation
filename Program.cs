@@ -38,31 +38,36 @@ namespace PigLatinCapstone
 
         public static string PigLatinTranslation(string sentence)
         {
-            string vowels = "AEIOUaeio";
-            foreach (string word in sentence.Split())
+            string[] array = sentence.Split(' '); //?
+            char [] vowels = { 'a', 'e', 'i', 'o', 'u' };
+            string newSentence = "";
+            foreach (string word in array) //definition?
             {
-                string y = "y";
                 
-                string firstLetterOfWord = sentence.Substring(0, 1);//starts at 0, moves up 1 letter
-                string restOfTheWord = sentence.Substring(1, sentence.Length - 1);//is at moved up, letter
+                string y = "y";
+
+                int currentLetterOfWord = word.IndexOfAny(vowels); //going through character array and establishing an index of that first vowel.
+                string firstLetterOfWord = word.Substring(0, currentLetterOfWord);//starts at 0, moves up 1 letter
+                string restOfTheWord = word.Substring(1, word.Length - 1);//is at moved up, letter
                 //sentence.length goes through rest of word, -1 subtracts 1st letter, not touching current index
-                int currentLetterOfWord = vowels.IndexOf(firstLetterOfWord);
+                
 
                 if (currentLetterOfWord == -1 && y == "y")
                 {
-                    sentence += restOfTheWord + firstLetterOfWord + "ay";
+                    newSentence = newSentence + restOfTheWord + firstLetterOfWord + "ay ";
 
                 }
                 else
                 {
-                    sentence = word + "way";
+                    newSentence = newSentence + word + "way ";
                 }
 
             }
-            return sentence;
+            return newSentence;
 
         }
 
     }
 }
 
+//
