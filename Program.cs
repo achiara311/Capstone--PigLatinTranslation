@@ -16,7 +16,7 @@ namespace PigLatinCapstone
                 /* method*/
                 Console.WriteLine("Please enter a word.\n");
                 string sentence = Console.ReadLine();
-                string pigLatin = PigLatin(sentence);
+                string pigLatin = PigLatinTranslation(sentence);
                 Console.WriteLine($"\n{pigLatin}\n");
 
                 Console.WriteLine("\nWould you like to go again?\n");
@@ -36,23 +36,21 @@ namespace PigLatinCapstone
             //for each (string x in (array))
         }
 
-        public static string PigLatin(string sentence)
+        public static string PigLatinTranslation(string sentence)
         {
             string vowels = "AEIOUaeio";
-            int currentLetter;
-
             foreach (string word in sentence.Split())
             {
                 string y = "y";
-
-                string firstLetter = sentence.Substring(0, 1);//starts at 0, moves up 1 letter
+                
+                string firstLetterOfWord = sentence.Substring(0, 1);//starts at 0, moves up 1 letter
                 string restOfTheWord = sentence.Substring(1, sentence.Length - 1);//is at moved up, letter
                 //sentence.length goes through rest of word, -1 subtracts 1st letter, not touching current index
-                currentLetter = vowels.IndexOf(firstLetter);
+                int currentLetterOfWord = vowels.IndexOf(firstLetterOfWord);
 
-                if (currentLetter == -1 && y == "y")
+                if (currentLetterOfWord == -1 && y == "y")
                 {
-                    sentence = restOfTheWord + firstLetter + "ay";
+                    sentence += restOfTheWord + firstLetterOfWord + "ay";
 
                 }
                 else
