@@ -1,0 +1,7 @@
+C:\Users\achia\OneDrive\Desktop\Capstone\PigLatinCapstone\bin\Debug\PigLatinCapstone.exe.config
+C:\Users\achia\OneDrive\Desktop\Capstone\PigLatinCapstone\bin\Debug\PigLatinCapstone.exe
+C:\Users\achia\OneDrive\Desktop\Capstone\PigLatinCapstone\bin\Debug\PigLatinCapstone.pdb
+C:\Users\achia\OneDrive\Desktop\Capstone\PigLatinCapstone\obj\Debug\PigLatinCapstone.csprojAssemblyReference.cache
+C:\Users\achia\OneDrive\Desktop\Capstone\PigLatinCapstone\obj\Debug\PigLatinCapstone.csproj.CoreCompileInputs.cache
+C:\Users\achia\OneDrive\Desktop\Capstone\PigLatinCapstone\obj\Debug\PigLatinCapstone.exe
+C:\Users\achia\OneDrive\Desktop\Capstone\PigLatinCapstone\obj\Debug\PigLatinCapstone.pdb
